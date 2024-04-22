@@ -1,0 +1,6 @@
+---
+en:
+  decidim:
+    components:
+      feeds_ui:
+        name: FeedsUi
