@@ -4,7 +4,7 @@ source "https://rubygems.org"
 
 ruby RUBY_VERSION
 
-gem "decidim", "~> 0.28.0"
+gem "decidim", "~> 0.28.1"
 gem "decidim-feeds_ui", path: "."
 
 gem "puma", ">= 6.3.1"
