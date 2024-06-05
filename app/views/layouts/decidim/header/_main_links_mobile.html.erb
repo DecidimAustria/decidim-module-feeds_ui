@@ -3,7 +3,7 @@
 <% end %>
 
 <button id="dropdown-trigger-links-mobile-search" class="main-bar__links-mobile__item" data-component="dropdown" data-target="dropdown-menu-search-mobile" data-autofocus="input-search-mobile">
-  <%= icon "team-line" %><span><%= t("decidim.feeds.mainMenu.user") %></span>
+  <%= icon "group-2-line" %><span><%= t("decidim.feeds.mainMenu.group") %></span>
 </button>
 
 <button class="btn circle main-bar__links-mobile__item" aria-expanded="false" aria-controls="newElementForm" type="button">
@@ -12,30 +12,9 @@
 </button>
 
 <button id="dropdown-trigger-links-mobile-search" class="main-bar__links-mobile__item" data-component="dropdown" data-target="dropdown-menu-search-mobile" data-autofocus="input-search-mobile">
-  <%= icon "group-2-line" %><span><%= t("decidim.feeds.mainMenu.group") %></span>
+  <%= icon "team-line" %><span><%= t("decidim.feeds.mainMenu.user") %></span>
 </button>
 
-<% if current_user %>
-  <button id="dropdown-trigger-links-mobile" class="main-bar__links-mobile__item" data-component="dropdown" data-target="dropdown-menu-account-mobile">
-    <% if current_user.notifications.any? %>
-      <span class="main-bar__notification"></span>
-    <% end %>
-
-    <% if current_user.avatar.attached? %>
-      <span class="main-bar__avatar">
-        <%= image_tag(
-                current_user.attached_uploader(:avatar).path(variant: :thumb),
-                alt: t("decidim.author.avatar", name: decidim_sanitize(current_user.avatar.name))
-              ) %>
-      </span>
-    <% else %>
-      <%= icon "user-smile-line" %>
-    <% end %>
-
-    <span><%= t("decidim.feeds.mainMenu.messenger") %></span>
-  </button>
-<% else %>
-  <%= link_to decidim.new_user_session_path, class: "main-bar__links-mobile__item" do %>
-    <%= icon "login-box-line" %><span><%= t("layouts.decidim.header.log_in") %></span>
-  <% end %>
+<%= link_to decidim.new_user_session_path, class: "main-bar__links-mobile__item" do %>
+  <%= icon "chat-4-line" %><span><%= t("decidim.feeds.mainMenu.messenger") %></span>
 <% end %>
