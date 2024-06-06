@@ -25,6 +25,10 @@ module Decidim
         Cell::ViewModel.view_paths << File.expand_path("#{Decidim::FeedsUi::Engine.root}/app/views")
       end
 
+      initializer "Feeds.register_icons" do
+        Decidim.icons.register(name: "notification-line", icon: "notification-line", category: "system", description: "", engine: :feedsUi)
+      end
+
     end
   end
 end

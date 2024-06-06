@@ -1,3 +1,12 @@
-<span class="author__avatar-container">
-  <img alt="Avatar: Sint est." class="author__avatar" src="/decidim-packs/media/images/default-avatar-aaa9e55bac5d7159b847.svg">
-</span>
+<% if current_user %>
+  <% if current_user.avatar.attached? %>  
+      <span class="main-bar__avatar">
+        <%= image_tag(
+                current_user.attached_uploader(:avatar).path(variant: :thumb),
+                alt: t("decidim.author.avatar", name: decidim_sanitize(current_user.avatar.name))
+              ) %>
+      </span>
+  <% else %>
+    CI
+  <% end %>
+<% end %>

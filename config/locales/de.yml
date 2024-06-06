@@ -1,5 +1,5 @@
 ---
-en:
+de:
   decidim:
     components:
       feeds_ui:
@@ -7,8 +7,8 @@ en:
         mainMenu:
           home: Start
           user: User
-          group: Groups
+          group: Gruppen
           messenger: Messenger
         topMenu:
           information: Info
-          notification: There are %{variable_name} new notifications
+          notification: Es gibt %{variable_name} neue Notifikationen

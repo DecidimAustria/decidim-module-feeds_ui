@@ -1,1 +1,57 @@
 /* css for decidim_feeds_ui */
+header {
+	.main-bar__links-mobile-top {
+		@apply flex gap-2;
+		> *:first-child {
+			@apply flex-grow flex gap-2 justify-center;
+		}
+		.links-mobile-top__item {
+			@apply flex gap-1 items-center text-xs font-medium rounded-2xl shadow-feedMenu py-1 px-2 w-fit;
+			svg {
+				@apply fill-black;
+			}
+			&[data-target*='dropdown'] {
+				span {
+					@apply text-xs font-medium;
+				}
+				svg {
+					@apply w-[16px] h-auto;
+				}
+			}
+			&.notification {
+				@apply shadow-feedNotification w-8 h-8 rounded-full;
+				svg {
+					@apply w-4 h-auto fill-feeds-notification;
+				}
+			}
+		}
+	}
+	.main-bar__links-mobile {
+		@apply inset-x-2 bottom-2 w-auto rounded-2xl shadow-feedMenu;
+		.main-bar__links-mobile__item {
+			@apply justify-between w-1/5 text-xs;
+			svg {
+				@apply w-[24px] h-auto fill-black;
+			}
+			&.circle {
+				svg {
+					@apply w-[48px] h-auto fill-black rotate-45;
+				}
+			}
+			span {
+				@apply text-black;
+			}
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	header {
+		.main-bar {
+			@apply flex gap-4 items-center;
+			> *:last-child {
+				@apply grow;
+			}
+		}
+	}
+}
