@@ -48,10 +48,13 @@ header {
 @media (max-width: 768px) {
 	header {
 		.main-bar {
-			@apply flex gap-4 items-center;
+			@apply flex gap-4 items-center fixed bg-white z-50;
 			> *:last-child {
 				@apply grow;
 			}
 		}
+	}
+	#content {
+		@apply mt-14;
 	}
 }
