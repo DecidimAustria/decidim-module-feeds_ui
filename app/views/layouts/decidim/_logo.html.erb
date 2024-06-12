@@ -7,6 +7,9 @@
               ) %>
       </span>
   <% else %>
-    CI
+    <span>
+      <%# <%= text_initials(current_user.name) %>
+      <%= current_user.name %>
+    </span>
   <% end %>
 <% end %>

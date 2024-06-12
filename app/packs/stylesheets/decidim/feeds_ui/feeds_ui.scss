@@ -8,7 +8,7 @@ header {
 		.links-mobile-top__item {
 			@apply flex gap-1 items-center text-xs font-medium rounded-2xl shadow-feedMenu py-1 px-2 w-fit;
 			svg {
-				@apply fill-black;
+				@apply fill-black w-[16px] h-auto;
 			}
 			&[data-target*='dropdown'] {
 				span {
@@ -22,6 +22,12 @@ header {
 				@apply shadow-feedNotification w-8 h-8 rounded-full;
 				svg {
 					@apply w-4 h-auto fill-feeds-notification;
+				}
+			}
+			&.active {
+				@apply shadow-feedNotification;
+				svg {
+					@apply fill-feeds-notification;
 				}
 			}
 		}
@@ -41,6 +47,14 @@ header {
 			span {
 				@apply text-black;
 			}
+			&.active {
+				span {
+					@apply text-feeds-notification;
+				}
+				svg {
+					@apply fill-feeds-notification;
+				}
+			}
 		}
 	}
 }
@@ -48,7 +62,7 @@ header {
 @media (max-width: 768px) {
 	header {
 		.main-bar {
-			@apply flex gap-4 items-center fixed bg-white z-50;
+			@apply flex gap-4 items-center bg-white fixed left-0 right-0 z-50;
 			> *:last-child {
 				@apply grow;
 			}
@@ -56,5 +70,18 @@ header {
 	}
 	#content {
 		@apply mt-14;
+	}
+}
+
+@media (max-width: 1024px) {
+	header {
+		.main-bar {
+			.main-bar__search {
+				@apply hidden;
+			}
+		}
+		#menu-bar {
+			@apply hidden;
+		}
 	}
 }

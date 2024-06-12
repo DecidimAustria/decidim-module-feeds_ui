@@ -12,7 +12,7 @@ module Decidim
         # Add engine routes here
         # resources :feeds_ui
         # root to: "feeds_ui#index"
-        get '/all_users', to: 'users#index'
+        get '/allusers', to: 'users#index'
       end
       
       isolate_namespace Decidim::FeedsUi

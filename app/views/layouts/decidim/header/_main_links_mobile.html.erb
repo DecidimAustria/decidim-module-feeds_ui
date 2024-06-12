@@ -11,10 +11,12 @@
   <span class="sr-only"><%= t("decidim.components.feeds.newFeed.title") %></span>
 </button>
 
-<button id="dropdown-trigger-links-mobile-search" class="main-bar__links-mobile__item" data-component="dropdown" data-target="dropdown-menu-search-mobile" data-autofocus="input-search-mobile">
+<%= link_to 'alluser', class: "main-bar__links-mobile__item" do %>
   <%= icon "team-line" %><span><%= t("decidim.components.feeds_ui.mainMenu.user") %></span>
-</button>
+<% end %>
 
-<%= link_to decidim.new_user_session_path, class: "main-bar__links-mobile__item" do %>
-  <%= icon "chat-4-line" %><span><%= t("decidim.components.feeds_ui.mainMenu.messenger") %></span>
+<% link_class = current_page?(decidim.conversations_path) ? 'active' : '' %>
+<%= link_to decidim.conversations_path, class: "main-bar__links-mobile__item #{link_class}" do %>
+  <%= icon "chat-4-line" %>
+  <span><%= t("decidim.components.feeds_ui.mainMenu.messenger") %></span>
 <% end %>
