@@ -1,6 +1,6 @@
 require_dependency "decidim/feeds/application_controller"
 
-module Decidim::Feeds
+module Decidim::FeedsUi
   class UsersController < ApplicationController
     def index
       @users = Decidim::User.all
