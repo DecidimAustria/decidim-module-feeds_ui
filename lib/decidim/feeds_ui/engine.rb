@@ -14,6 +14,13 @@ module Decidim
         # root to: "feeds_ui#index"
         get '/allusers', to: 'users#index'
       end
+
+      # this should make /allusers available at /feeds_ui/allusers
+      initializer "FeedsUi.mount_routes" do
+        Decidim::Core::Engine.routes do
+          mount Decidim::FeedsUi::Engine, at: "/feeds_ui", as: "decidim_feeds_ui"
+        end
+      end
       
       isolate_namespace Decidim::FeedsUi
 
