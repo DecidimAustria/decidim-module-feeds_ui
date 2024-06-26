@@ -6,6 +6,7 @@ Decidim.register_component(:feeds_ui) do |component|
   component.engine = Decidim::FeedsUi::Engine
   component.admin_engine = Decidim::FeedsUi::AdminEngine
   component.icon = "decidim/feeds_ui/icon.svg"
+  component.permissions_class_name = "Decidim::FeedsUi::Permissions"
 
   # component.on(:before_destroy) do |instance|
   #   # Code executed before removing the component

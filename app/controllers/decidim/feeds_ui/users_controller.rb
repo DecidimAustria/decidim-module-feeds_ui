@@ -1,10 +1,12 @@
-require_dependency "decidim/feeds/application_controller"
+# frozen_string_literal: true
 
-module Decidim::FeedsUi
-  class UsersController < ApplicationController
-    helper Decidim::FeedsUi::ApplicationHelper
-    def index
-      @users = Decidim::User.all
+module Decidim
+  module FeedsUi
+    class UsersController < Decidim::FeedsUi::ApplicationController
+      def index
+        enforce_permission_to :read, :post
+        @users = Decidim::User.all
+      end
     end
   end
 end
