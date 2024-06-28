@@ -16,12 +16,15 @@
 <% end %>
 
 <% link_class = current_page?(decidim.conversations_path) ? 'active' : '' %>
+<% if current_user %>
 <% link_class = !current_user.unread_conversations.any? ? 'notification' : '' %>
-
+<%end%>
 <%= link_to decidim.conversations_path, class: "main-bar__links-mobile__item #{link_class}" do %>
   <%= icon "chat-4-line" %>
   <span><%= t("decidim.components.feeds_ui.mainMenu.messenger") %></span>
-  <% if current_user.unread_conversations.any? %>
-    <span class="notification"></span>
+  <% if current_user %>
+    <% if current_user.unread_conversations.any? %>
+      <span class="notification"></span>
+    <% end %>
   <% end %>
 <% end %>
