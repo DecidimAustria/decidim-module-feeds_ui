@@ -55,6 +55,12 @@ header {
 					@apply fill-feeds-notification;
 				}
 			}
+			&.notification {
+				@apply gap-0 relative;
+				span.notification {
+					@apply absolute top-0 right-4 w-3 h-3 bg-feeds-notification rounded-full;
+				}
+			}
 		}
 	}
 }

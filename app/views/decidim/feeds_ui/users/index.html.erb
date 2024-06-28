@@ -1,7 +1,27 @@
-<h1>All Users</h1>
+<%
+columns ||= 6
+# Class names need to be complete, not metaprogrammed, because of Tailwind class purge
+css_class = case columns
+            when 10 then "cols-10"
+            when 8 then "cols-8"
+            else "cols-6"
+            end
+%>
+<%= render layout:"layouts/decidim/shared/layout_center" do %>
+  <div class="py-12 space-y-12">
 
-<ul>
-  <% @users.each do |user| %>
-    <li><%= user.name %></li>
-  <% end %>
-</ul>
+    <div>
+      <h1 class="h1 decorator inline-block text-left">
+        All Users
+      </h1>
+    </div>
+
+    <div class="editor-content">
+      <ul>
+        <% @users.each do |user| %>
+          <li><%= user.name %></li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+<% end %>
