@@ -8,20 +8,21 @@ css_class = case columns
             end
 %>
 <%= render layout:"layouts/decidim/shared/layout_center" do %>
-  <div class="py-12 space-y-12">
-
-    <div>
-      <h1 class="h1 decorator inline-block text-left">
-        All Users
-      </h1>
-    </div>
-
-    <div class="editor-content">
-      <ul>
-        <% @users.each do |user| %>
-          <li><%= user.name %></li>
-        <% end %>
-      </ul>
-    </div>
+  <div class="w-12 h-5 justify-start items-end gap-1 inline-flex">
+    <%= icon "filter-2-line" %> 
+    <%= t("decidim.components.feeds_ui.user.filter")%>
+  </div>
+  <div class="">
+    <ul>
+      <% @users.each do |user| %>
+        <li class="grow shrink basis-0 pl-4 pr-6 py-2 bg-white rounded-2xl shadow justify-between items-center gap-4 flex">
+          <div class="py-2 flex-col justify-start items-start flex">
+            <span><%= user.name %></span>
+            <span><%= user.name %></span>
+          </div>   
+          <%= image_tag(user.attached_uploader(:avatar).path(variant: :thumb), alt: decidim_sanitize(user.name), class: 'block rounded-full') %>
+        </li>
+      <% end %>
+    </ul>
   </div>
 <% end %>

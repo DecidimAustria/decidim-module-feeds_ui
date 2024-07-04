@@ -12,3 +12,5 @@ en:
         topMenu:
           information: Info
           notification: There are %{variable_name} new notifications
+        user:
+          filter: Filter
