@@ -35,6 +35,7 @@ module Decidim
 
       initializer "Feeds.register_icons" do
         Decidim.icons.register(name: "notification-line", icon: "notification-line", category: "system", description: "", engine: :feedsUi)
+        Decidim.icons.register(name: "filter-2-line", icon: "filter-2-line", category: "system", description: "", engine: :feedsUi)
       end
 
     end

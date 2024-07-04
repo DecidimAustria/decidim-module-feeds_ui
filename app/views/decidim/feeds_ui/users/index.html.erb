@@ -17,8 +17,8 @@ css_class = case columns
       <% @users.each do |user| %>
         <li class="grow shrink basis-0 pl-4 pr-6 py-2 bg-white rounded-2xl shadow justify-between items-center gap-4 flex">
           <div class="py-2 flex-col justify-start items-start flex">
-            <span><%= user.name %></span>
-            <span><%= user.name %></span>
+            <span class="font-semibold"><%= user.name %></span>
+            <span>@<%= user.nickname %></span>
           </div>   
           <%= image_tag(user.attached_uploader(:avatar).path(variant: :thumb), alt: decidim_sanitize(user.name), class: 'block rounded-full') %>
         </li>
