@@ -13,4 +13,8 @@ en:
           information: Info
           notification: There are %{variable_name} new notifications
         user:
-          filter: Filter
+          filter: 
+            title: filter
+            name: Name
+            interest: Interest
+            block: Staircase / Building / District

@@ -13,4 +13,9 @@ de:
           information: Info
           notification: Es gibt %{variable_name} neue Notifikationen
         user:
-          filter: Filter
+          filter: 
+            title: filter
+            name: Name
+            interest: Interessen
+            block: Stiege / Anlage / Quartier
+

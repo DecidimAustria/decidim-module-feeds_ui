@@ -13,4 +13,8 @@ it:
           information: Info
           notification: Ci sono %{variable_name} nuove notifiche
         user:
-          filter: Filter
+          filter: 
+            title: filtrp
+            name: Nome
+            interest: Interesse
+            block: Scala / Struttura / Quartiere

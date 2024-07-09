@@ -91,3 +91,12 @@ header {
 		}
 	}
 }
+
+.feedsUI__user{
+	.feedsUI__user_filter{
+		@apply h-0 invisible motion-safe:transition-transform;
+		&.active{
+			@apply h-auto visible;
+		}
+	}
+}
