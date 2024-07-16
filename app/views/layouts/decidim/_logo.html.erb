@@ -3,7 +3,7 @@
       <span class="main-bar__avatar">
         <%= image_tag(
                 current_user.attached_uploader(:avatar).path(variant: :thumb),
-                alt: t("decidim.author.avatar", name: decidim_sanitize(current_user.avatar.name))
+                alt: t("decidim.author.avatar", name: decidim_sanitize(current_user.nickname))
               ) %>
       </span>
   <% else %>

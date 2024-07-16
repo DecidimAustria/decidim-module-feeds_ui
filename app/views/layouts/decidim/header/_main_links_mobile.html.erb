@@ -1,30 +1,32 @@
-<%= link_to decidim.root_url, class: "main-bar__links-mobile__item" do %>
-  <%= icon "home-5-line" %><span><%= t("decidim.components.feeds_ui.mainMenu.home") %></span>
-<% end %>
+<% if current_user %> 
+  <%= link_to decidim.root_url, class: "main-bar__links-mobile__item" do %>
+    <%= icon "home-5-line" %><span><%= t("decidim.components.feeds_ui.mainMenu.home") %></span>
+  <% end %>
 
-<button id="dropdown-trigger-links-mobile-search" class="main-bar__links-mobile__item" data-component="dropdown" data-target="dropdown-menu-search-mobile" data-autofocus="input-search-mobile">
-  <%= icon "group-2-line" %><span><%= t("decidim.components.feeds_ui.mainMenu.group") %></span>
-</button>
+  <button id="dropdown-trigger-links-mobile-search" class="main-bar__links-mobile__item" data-component="dropdown" data-target="dropdown-menu-search-mobile" data-autofocus="input-search-mobile">
+    <%= icon "group-2-line" %><span><%= t("decidim.components.feeds_ui.mainMenu.group") %></span>
+  </button>
 
-<button class="btn circle main-bar__links-mobile__item" aria-expanded="false" aria-controls="newElementForm" type="button">
-  <%= icon "close-circle-line" %>
-  <span class="sr-only"><%= t("decidim.components.feeds.newFeed.title") %></span>
-</button>
+  <button class="btn circle main-bar__links-mobile__item" aria-expanded="false" aria-controls="newElementForm" type="button">
+    <%= icon "close-circle-line" %>
+    <span class="sr-only"><%= t("decidim.components.feeds.newFeed.title") %></span>
+  </button>
 
-<%= link_to '/feeds_ui/allusers', class: "main-bar__links-mobile__item" do %>
-  <%= icon "team-line" %><span><%= t("decidim.components.feeds_ui.mainMenu.user") %></span>
-<% end %>
+  <%= link_to '/feeds_ui/allusers', class: "main-bar__links-mobile__item" do %>
+    <%= icon "team-line" %><span><%= t("decidim.components.feeds_ui.mainMenu.user") %></span>
+  <% end %>
 
-<% link_class = current_page?(decidim.conversations_path) ? 'active' : '' %>
-<% if current_user %>
-<% link_class = !current_user.unread_conversations.any? ? 'notification' : '' %>
-<%end%>
-<%= link_to decidim.conversations_path, class: "main-bar__links-mobile__item #{link_class}" do %>
-  <%= icon "chat-4-line" %>
-  <span><%= t("decidim.components.feeds_ui.mainMenu.messenger") %></span>
+  <% link_class = current_page?(decidim.conversations_path) ? 'active' : '' %>
   <% if current_user %>
-    <% if current_user.unread_conversations.any? %>
-      <span class="notification"></span>
+  <% link_class = !current_user.unread_conversations.any? ? 'notification' : '' %>
+  <%end%>
+  <%= link_to decidim.conversations_path, class: "main-bar__links-mobile__item #{link_class}" do %>
+    <%= icon "chat-4-line" %>
+    <span><%= t("decidim.components.feeds_ui.mainMenu.messenger") %></span>
+    <% if current_user %>
+      <% if current_user.unread_conversations.any? %>
+        <span class="notification"></span>
+      <% end %>
     <% end %>
   <% end %>
 <% end %>

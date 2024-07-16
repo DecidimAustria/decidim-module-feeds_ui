@@ -1,31 +1,23 @@
-<div>
-  <% if current_user %>
+<% if current_user %>
+  <div>
     <% link_class = current_page?(decidim.account_path) ? 'active' : '' %>
     <%= link_to decidim.account_path, class: "links-mobile-top__item #{link_class}" do %>
       <%= icon "user-smile-line" %>
       <span class="text-secondary"><%= t("layouts.decidim.user_profile.account") %></span>
     <% end %>
-  <% else %>
-    <%= link_to decidim.new_user_session_path, class: "links-mobile-top__item" do %>
-      <%= icon "login-box-line" %>
-      <span><%= t("layouts.decidim.header.log_in") %></span>
+
+    <button id="dropdown-trigger-links-mobile-search" class="links-mobile-top__item" data-component="dropdown" data-target="dropdown-menu-search-mobile" data-autofocus="input-search-mobile">
+      <%= icon "search-line" %><span><%= t("decidim.search.term_input_placeholder") %></span>
+    </button>
+
+    <%= link_to '/pages/info', class: "links-mobile-top__item" do %>
+      <%= icon "information-line" %><span><%= t("decidim.components.feeds_ui.topMenu.information") %></span>
     <% end %>
-  <% end %>
-
-  <button id="dropdown-trigger-links-mobile-search" class="links-mobile-top__item" data-component="dropdown" data-target="dropdown-menu-search-mobile" data-autofocus="input-search-mobile">
-    <%= icon "search-line" %><span><%= t("decidim.search.term_input_placeholder") %></span>
-  </button>
-
-  <%= link_to '/pages/info', class: "links-mobile-top__item" do %>
-    <%= icon "information-line" %><span><%= t("decidim.components.feeds_ui.topMenu.information") %></span>
-  <% end %>
-</div>
-
-<% if current_user %>
+  </div>
   <% if current_user.notifications.any? %>
     <%= link_to decidim.notifications_path, class: "links-mobile-top__item notification" do %>
       <%= icon "notification-line" %>
       <span class="feeds__notification sr-only"><%= t("decidim.components.feeds_ui.topMenu.notification") %></span>
     <%end%>
-  <% end %>
+  <% end %>  
 <% end %>
