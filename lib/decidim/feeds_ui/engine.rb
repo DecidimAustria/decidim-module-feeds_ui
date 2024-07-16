@@ -8,11 +8,14 @@ module Decidim
     # This is the engine that runs on the public interface of feeds_ui.
     class Engine < ::Rails::Engine
 
+      isolate_namespace Decidim::FeedsUi
+      
       routes do
         # Add engine routes here
         # resources :feeds_ui
         # root to: "feeds_ui#index"
         get '/allusers', to: 'users#index'
+        get '/user_profile/:id', to: 'users#user_profile', as: 'user_profile'
       end
 
       # this should make /allusers available at /feeds_ui/allusers
@@ -22,7 +25,7 @@ module Decidim
         end
       end
       
-      isolate_namespace Decidim::FeedsUi
+      
 
       initializer "FeedsUi.webpacker.assets_path" do
         Decidim.register_assets_path File.expand_path("app/packs", root)

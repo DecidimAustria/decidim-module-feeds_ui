@@ -1,0 +1,63 @@
+<main class="feedsUI__user px-4">
+  <div class="w-96 h-96 bg-white flex-col justify-start items-start inline-flex">
+  <div class="self-stretch h-96 p-4 flex-col justify-start items-start gap-4 flex">
+    <div class="self-stretch h-96 flex-col justify-start items-start gap-4 flex">
+      <div class="self-stretch justify-start items-start gap-4 inline-flex">
+        <div class="grow shrink basis-0 h-36 py-2 flex-col justify-start items-start inline-flex">
+          <div class="text-stone-700 text-xl font-bold font-['Source Sans Pro']"><%= @user.name %></div>
+          <div class="self-stretch h-16 px-2 flex-col justify-start items-start gap-2 flex">
+            <div class="self-stretch text-stone-950 text-base font-normal font-['Source Sans Pro']">@<%= @user.nickname %></div>
+            <div class="self-stretch h-8 py-2 flex-col justify-center items-start gap-3 flex">
+              <div class="justify-start items-end gap-2 inline-flex">
+                <div class="text-black text-sm font-normal font-['Source Sans Pro'] leading-3">Nachricht schreiben</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="p-2 justify-center items-start flex">
+          <%= image_tag @user.attached_uploader(:avatar).path(), alt: t("decidim.author.avatar", name: decidim_sanitize(@user.name)) %>
+        </div>
+      </div>
+      <div class="self-stretch h-16 flex-col justify-start items-start gap-2 flex">
+        <div class="w-96 text-stone-700 text-base font-normal font-['Source Sans Pro'] leading-normal"><%= @user.about.to_s%></div>
+      </div>
+      <div class="self-stretch px-1 py-6 rounded-2xl justify-start items-center gap-4 inline-flex">
+        <div class="origin-top-left -rotate-90 text-stone-500 text-xl font-semibold font-['Source Sans Pro']">Interessen</div>
+        <div class="grow shrink basis-0 h-20 px-2 justify-start items-center gap-4 flex">
+          <div class="px-2 py-1 rounded border border-stone-700 justify-center items-center gap-2 flex">
+            <div class="text-stone-700 text-sm font-semibold font-['Source Sans Pro'] leading-tight">Kochen</div>
+          </div>
+          <div class="px-2 py-1 rounded border border-stone-700 justify-center items-center gap-2 flex">
+            <div class="text-stone-700 text-sm font-semibold font-['Source Sans Pro'] leading-tight">Lesen</div>
+          </div>
+          <div class="px-2 py-1 rounded border border-stone-700 justify-center items-center gap-2 flex">
+            <div class="text-stone-700 text-sm font-semibold font-['Source Sans Pro'] leading-tight">Kino</div>
+          </div>
+          <div class="px-2 py-1 rounded border border-stone-700 justify-center items-center gap-2 flex">
+            <div class="text-stone-700 text-sm font-semibold font-['Source Sans Pro'] leading-tight">Wandern</div>
+          </div>
+          <div class="px-2 py-1 rounded border border-stone-700 justify-center items-center gap-2 flex">
+            <div class="text-stone-700 text-sm font-semibold font-['Source Sans Pro'] leading-tight">Kinder</div>
+          </div>
+          <div class="px-2 py-1 rounded border border-stone-700 justify-center items-center gap-2 flex">
+            <div class="text-stone-700 text-sm font-semibold font-['Source Sans Pro'] leading-tight">Katzen</div>
+          </div>
+          <div class="px-2 py-1 rounded border border-stone-700 justify-center items-center gap-2 flex">
+            <div class="text-stone-700 text-sm font-semibold font-['Source Sans Pro'] leading-tight">Touren</div>
+          </div>
+        </div>
+      </div>
+      <div class="self-stretch px-1 py-6 rounded-2xl justify-start items-center gap-4 inline-flex">
+        <div class="origin-top-left -rotate-90 text-stone-500 text-xl font-semibold font-['Source Sans Pro']">Gruppen</div>
+        <div class="grow shrink basis-0 h-14 px-2 justify-start items-center gap-4 flex">
+          <img class="w-14 h-14 rounded-3xl shadow" src="https://via.placeholder.com/60x60" />
+          <img class="w-14 h-14 rounded-3xl shadow" src="https://via.placeholder.com/60x60" />
+        </div>
+      </div>
+      <div class="self-stretch px-1 py-6 rounded-2xl justify-start items-start gap-4 inline-flex">
+        <div class="origin-top-left -rotate-90 text-stone-500 text-xl font-semibold font-['Source Sans Pro']">Aktivitäten</div>
+      </div>
+    </div>
+  </div>
+</div>
+</main>
