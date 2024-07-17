@@ -28,12 +28,14 @@
               <span>@<%= user.nickname %></span>
             </div>
             <span class="rounded-full w-[50px] h-[50px] overflow-hidden">
-              <%= image_tag(
-              user.attached_uploader(:avatar).path(),
-              alt: decidim_sanitize(user.nickname), 
-              class: 'block w-full h-full object-cover'
-              )
-              %>
+              <% if user.avatar.attached? %>
+                <%= image_tag(
+                      user.attached_uploader(:avatar).path(),
+                      alt: decidim_sanitize(user.nickname), 
+                      class: 'block w-full h-full object-cover'
+                    )
+                %>
+              <% end %>
             </span>
           </a>
         </li>
