@@ -18,7 +18,7 @@
       <% end %>
     <% end %>
   </div>
-  <div class="">
+  <div class="user_display" aria-live="polite">
     <ul>
       <% @users.each do |user| %>
         <li>
@@ -47,3 +47,21 @@
 <style>
 .decidim-accessibility-badge{display:none;}
 </style>
+
+<%= javascript_include_tag 'application' %>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const fields = document.querySelectorAll('#feedsUI__user_interest, #feedsUI__user_apartment');
+    fields.forEach(field => {
+      field.addEventListener('input', function() {
+        const interest = document.querySelector('#feedsUI__user_interest').value;
+        const apartment = document.querySelector('#feedsUI__user_apartment').value;
+        Rails.ajax({
+          url: "/allusers?interest=" + interest + "&apartment=" + apartment,
+          type: "GET",
+          dataType: 'script'
+        });
+      });
+    });
+  });
+</script>

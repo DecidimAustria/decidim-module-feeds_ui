@@ -1,0 +1,10 @@
+<% users.each do |user| %>
+  <li>
+    <a href="/feeds_ui/user_profile/<%= user.id %>" class="grow shrink basis-0 pl-4 pr-6 py-4 m-4 bg-white rounded-2xl shadow justify-between items-center gap-4 flex">
+      <div class="py-2 flex-col justify-start items-start flex">
+        <span class="font-semibold"><%= user.name %></span>
+        <span>@<%= user.nickname %></span>
+      </div>
+    </a>
+  </li>
+<% end %>
