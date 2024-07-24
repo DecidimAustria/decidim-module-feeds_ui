@@ -3,43 +3,24 @@
     <%= icon "filter-2-line", class: "h-[20px] w-auto" %><span><%= t("decidim.components.feeds_ui.user.filter.title") %></span>
   </button> 
   <div id="feedsUI__user_filter" class="feedsUI__user_filter">
-    <%= form_tag(decidim_feeds_ui.allusers_path, method: :get, id: "user_filter", remote: true, class: "flex flex-col gap-4 px-4 pt-0 pb-4") do %>
+    <%= form_tag(decidim_feeds_ui.allusers_path, method: :get, id: "feedsUI__user_filterForm", remote: true, class: "flex flex-col gap-4 px-4 pt-0 pb-4") do %>
       <%= label_tag :name, class: "flex flex-col gap-1" do %>
         <%= t("decidim.components.feeds_ui.user.filter.name") %>
-        <%= text_field_tag :name, params[:name], id: "feedsUI__user_name", class: "reset-defaults p-4 border border-gray rounded-md" %>
+        <%= text_field_tag :name, params[:name], id: "feedsUI__user_name", class: "reset-defaults p-4 border border-gray rounded-md", autocomplete: "off" %>
       <% end %>
       <%= label_tag :interest, class: "flex flex-col gap-1" do %>
         <%= t("decidim.components.feeds_ui.user.filter.interest") %>
-        <%= text_field_tag :interest, params[:interest], id: "feedsUI__user_interest", class: "reset-defaults p-4 border border-gray rounded-md" %>
+        <%= text_field_tag :interest, params[:interest], id: "feedsUI__user_interest", class: "reset-defaults p-4 border border-gray rounded-md", autocomplete: "off" %>
       <% end %>
       <%= label_tag :apartment, class: "flex flex-col gap-1" do %>
         <%= t("decidim.components.feeds_ui.user.filter.block") %>
-        <%= text_field_tag :apartment, params[:apartment], id: "feedsUI__user_apartment", class: "reset-defaults p-4 border border-gray rounded-md" %>
+        <%= text_field_tag :apartment, params[:apartment], id: "feedsUI__user_apartment", class: "reset-defaults p-4 border border-gray rounded-md", autocomplete: "off" %>
       <% end %>
     <% end %>
   </div>
   <div class="user_display" aria-live="polite">
     <ul>
-      <% @users.each do |user| %>
-        <li>
-          <a href="/feeds_ui/user_profile/<%= user.id %>" class="grow shrink basis-0 pl-4 pr-6 py-4 m-4 bg-white rounded-2xl shadow justify-between items-center gap-4 flex">
-            <div class="py-2 flex-col justify-start items-start flex">
-              <span class="font-semibold"><%= user.name %></span>
-              <span>@<%= user.nickname %></span>
-            </div>
-            <span class="rounded-full w-[50px] h-[50px] overflow-hidden">
-              <% if user.avatar.attached? %>
-                <%= image_tag(
-                      user.attached_uploader(:avatar).path(),
-                      alt: decidim_sanitize(user.nickname), 
-                      class: 'block w-full h-full object-cover'
-                    )
-                %>
-              <% end %>
-            </span>
-          </a>
-        </li>
-      <% end %>
+      <%= render partial: "users_list", locals: { users: @users } %>
     </ul>
   </div>
 </main>
@@ -47,21 +28,3 @@
 <style>
 .decidim-accessibility-badge{display:none;}
 </style>
-
-<%= javascript_include_tag 'application' %>
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    const fields = document.querySelectorAll('#feedsUI__user_interest, #feedsUI__user_apartment');
-    fields.forEach(field => {
-      field.addEventListener('input', function() {
-        const interest = document.querySelector('#feedsUI__user_interest').value;
-        const apartment = document.querySelector('#feedsUI__user_apartment').value;
-        Rails.ajax({
-          url: "/allusers?interest=" + interest + "&apartment=" + apartment,
-          type: "GET",
-          dataType: 'script'
-        });
-      });
-    });
-  });
-</script>

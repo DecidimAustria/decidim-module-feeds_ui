@@ -22,6 +22,15 @@ module Decidim
 
         @profile_holder ||= Decidim::UserBaseEntity.find_by("LOWER(nickname) = ? AND decidim_organization_id = ?", params[:nickname].downcase, current_organization.id)
       end
+
+      def filter_users
+        # @user = Decidim::User.find_by(name: params[:name], interest: params[:interest], apartment: params[:apartment])
+        @users = Decidim::User.where("lower(name) like ?", "%#{params[:name].downcase}%")
+        respond_to do |format|
+          format.js
+        end
+      end
+
     end
   end
 end

@@ -16,7 +16,7 @@ module Decidim
         # root to: "feeds_ui#index"
         get '/allusers', to: 'users#index'
         get '/user_profile/:id', to: 'users#user_profile', as: 'user_profile'
-        get '/allusers', to: 'decidim/feeds_ui/admin/users#filter_users'
+        get '/filter_users', to: 'users#filter_users', as: 'filter_users'
       end
 
       # this should make /allusers available at /feeds_ui/allusers
