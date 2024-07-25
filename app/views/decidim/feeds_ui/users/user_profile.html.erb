@@ -11,7 +11,7 @@
       <%# end %>
     </div>
     <div class="w-1/2">
-      <% if @user.attached_uploader(:avatar).present? %>
+      <% if @user.avatar.attached? %>
         <%= image_tag @user.attached_uploader(:avatar).path(), alt: t("decidim.author.avatar", name: decidim_sanitize(@user.name)), class: "w-[250px] h-[250px] object-cover rounded-md" %>
       <% end %>
     </div>

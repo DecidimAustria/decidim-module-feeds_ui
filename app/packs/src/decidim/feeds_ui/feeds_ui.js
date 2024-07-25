@@ -28,9 +28,6 @@ document.addEventListener('DOMContentLoaded', function () {
 		const name = document.querySelector('#feedsUI__user_name').value;
 		const interest = document.querySelector('#feedsUI__user_interest').value;
 		const apartment = document.querySelector('#feedsUI__user_apartment').value;
-		console.log(name);
-		console.log(interest);
-		console.log(apartment);
 		const params = new URLSearchParams({
 			name: name,
 			interest: interest,
@@ -38,7 +35,7 @@ document.addEventListener('DOMContentLoaded', function () {
 		});
 		Rails.ajax({
 			url: '/feeds_ui/filter_users?' + params.toString(),
-			type: 'GET'
+			type: 'GET',
 		});
 	}
 });

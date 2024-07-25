@@ -73,6 +73,12 @@ header {
 				@apply grow;
 			}
 		}
+		.container:has(.flash) {
+			@apply absolute top-[72px] left-0 right-0 z-50 bg-white;
+			.flash {
+				@apply m-0 py-2;
+			}
+		}
 	}
 	#content {
 		@apply mt-[72px];
@@ -92,10 +98,10 @@ header {
 	}
 }
 
-.feedsUI__user{
-	.feedsUI__user_filter{
+.feedsUI__user {
+	.feedsUI__user_filter {
 		@apply h-0 invisible motion-safe:transition-transform;
-		&.active{
+		&.active {
 			@apply h-auto visible;
 		}
 	}
