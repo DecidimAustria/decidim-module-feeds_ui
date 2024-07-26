@@ -1,5 +1,4 @@
-<% if current_user %> 
-  <%= link_to decidim.root_url, class: "main-bar__links-mobile__item" do %>
+<%= link_to decidim.root_url, class: "main-bar__links-mobile__item" do %>
     <%= icon "home-5-line" %><span><%= t("decidim.components.feeds_ui.mainMenu.home") %></span>
   <% end %>
 
@@ -25,4 +24,3 @@
       <span class="absolute translate-x-5 h-2 w-2 rounded-full bg-feeds-notification" data-unread-conversations="true" data-unread-items="true"></span>
     <% end %>
   <% end %>
-<% end %>
