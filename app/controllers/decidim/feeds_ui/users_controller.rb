@@ -9,11 +9,11 @@ module Decidim
 
       def index
         enforce_permission_to :read, :users
-        @users = Decidim::User.all
+        @users = organization_users.confirmed
       end
 
       def user_profile
-        @user = Decidim::User.find(params[:id])
+        @user = organization_users.find(params[:id])
         # Additional logic for displaying the user's profile
       end
 
@@ -25,10 +25,16 @@ module Decidim
 
       def filter_users
         # @user = Decidim::User.find_by(name: params[:name], interest: params[:interest], apartment: params[:apartment])
-        @users = Decidim::User.where("lower(name) like ?", "%#{params[:name].downcase}%")
+        @users = organization_users.where("lower(name) like ?", "%#{params[:name].downcase}%")
         respond_to do |format|
           format.js
         end
+      end
+
+      private
+
+      def organization_users
+        Decidim::User.where(organization: current_organization)
       end
 
     end
