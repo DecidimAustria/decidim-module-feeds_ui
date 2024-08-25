@@ -10,7 +10,7 @@ de:
           group: Gruppen
           messenger: Messenger
         userMenu:
-          sign_out: Sign out
+          sign_out: Abmelden
         topMenu:
           information: Info
           notification: Es gibt %{variable_name} neue Notifikationen

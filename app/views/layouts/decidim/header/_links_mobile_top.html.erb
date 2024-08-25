@@ -1,9 +1,17 @@
 <% if current_user %>
   <div>
     <% link_class = current_page?(decidim.account_path) ? 'active' : '' %>
+
+    <% if false %>
     <%= link_to decidim.account_path, class: "links-mobile-top__item #{link_class}" do %>
       <%= icon "user-smile-line" %>
       <span class="text-secondary"><%= t("layouts.decidim.user_profile.account") %></span>
+    <% end %>
+    <% end %>
+
+    <%= link_to decidim.destroy_user_session_path, method: :delete, class: "links-mobile-top__item #{link_class}" do %>
+      <%#= icon "user-smile-line" %>
+      <span class="text-secondary whitespace-nowrap"><%= t("decidim.components.feeds_ui.userMenu.sign_out") %></span>
     <% end %>
 
     <button id="dropdown-trigger-links-mobile-search" class="links-mobile-top__item" data-component="dropdown" data-target="dropdown-menu-search-mobile" data-autofocus="input-search-mobile">
@@ -18,6 +26,6 @@
     <%= link_to decidim.notifications_path, class: "links-mobile-top__item notification" do %>
       <%= icon "notification-line" %>
       <span class="feeds__notification sr-only"><%= t("decidim.components.feeds_ui.topMenu.notification") %></span>
-    <%end%>
-  <% end %>  
+    <% end %>
+  <% end %>
 <% end %>
