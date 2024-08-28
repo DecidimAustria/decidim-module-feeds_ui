@@ -6,10 +6,17 @@
     <%= icon "group-2-line" %><span><%= t("decidim.components.feeds_ui.mainMenu.group") %></span>
   </button>
 
-  <button class="btn circle main-bar__links-mobile__item feeds__feed_newElement-opener" aria-expanded="false" aria-controls="newElementForm" type="button">
-    <%= icon "close-circle-line" %>
-    <span class="sr-only"><%= t("decidim.components.posts.newFeed.title") %></span>
-  </button>
+  <% if controller.controller_name != 'conversations' %>
+    <button class="btn circle main-bar__links-mobile__item feeds__feed_newElement-opener" aria-expanded="false" aria-controls="newElementForm" type="button">
+      <%= icon "close-circle-line" %>
+      <span class="sr-only"><%= t("decidim.components.posts.newFeed.title") %></span>
+    </button>
+  <% else %>
+    <button id="start-conversation-dialog-button" type="button" class="btn circle main-bar__links-mobile__item" data-dialog-open="conversation">
+      <span class="sr-only"><%= t("new_conversation", scope: "decidim.messaging.conversations.index") %></span>
+      <%= icon "close-circle-line" %>
+    </button>
+  <% end %>
 
   <% link_class = current_page?(decidim_feeds_ui.allusers_path) ? 'active' : '' %>
   <%= link_to decidim_feeds_ui.allusers_path, class: "main-bar__links-mobile__item #{link_class}" do %>

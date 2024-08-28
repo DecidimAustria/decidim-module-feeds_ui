@@ -8,10 +8,7 @@
               ) %>
         </span>
     <% else %>
-      <span>
-        <%#= text_initials(current_user.name) %>
-        <%= current_user.name %>
-      </span>
+      <%= image_tag("/media/images/default-avatar.svg", alt: current_user.name) %>
     <% end %>
   <% end %>
 <% end %>
