@@ -1,5 +1,8 @@
 /* css for decidim_feeds_ui */
 header {
+	.main-bar__avatar {
+		@apply border-0 shadow-feedMenu;
+	}
 	.main-bar__links-mobile-top {
 		@apply flex gap-2 lg:hidden;
 		> *:first-child {
