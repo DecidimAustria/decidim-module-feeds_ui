@@ -16,6 +16,7 @@ module Decidim
           ::Decidim::Permissions
         ]
       end
+      
     end
   end
 end
