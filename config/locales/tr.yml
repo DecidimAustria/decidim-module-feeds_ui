@@ -1,0 +1,23 @@
+---
+tr:
+  decidim:
+    components:
+      feeds_ui:
+        name: FeedsUi
+        mainMenu:
+          home: Başlangıç
+          user: Kullanıcı
+          group: Gruplar
+          messenger: Mesajlaşma
+        userMenu:
+          sign_out: Çıkış yap
+        topMenu:
+          information: Bilgi
+          notification: "%{variable_name} yeni bildirim var"
+        user:
+          filter: 
+            title: filtre
+            name: İsim
+            interest: İlgi
+            block: Merdiven / Bina / Bölge
+            noUser: Kullanıcı bulunamadı

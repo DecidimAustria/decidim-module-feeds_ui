@@ -1,0 +1,23 @@
+---
+bs:
+  decidim:
+    components:
+      feeds_ui:
+        name: FeedsUi
+        mainMenu:
+          home: Početna
+          user: Korisnik
+          group: Grupe
+          messenger: Messenger
+        userMenu:
+          sign_out: Odjava
+        topMenu:
+          information: Info
+          notification: Postoje %{variable_name} nova obavještenja
+        user:
+          filter: 
+            title: Filter
+            name: Ime
+            interest: Interes
+            block: Stubište / Zgrada / Kvart
+            noUser: Nema pronađenih korisnika
