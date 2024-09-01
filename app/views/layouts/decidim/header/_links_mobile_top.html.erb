@@ -21,7 +21,7 @@
       <%#= icon "user-smile-line" %>
       <span class="text-secondary whitespace-nowrap"><%= t("decidim.components.feeds_ui.userMenu.sign_out") %></span>
     <% end %>
-    
+
   </div>
   <% if current_user.notifications.any? %>
     <%= link_to decidim.notifications_path, class: "links-mobile-top__item notification" do %>
