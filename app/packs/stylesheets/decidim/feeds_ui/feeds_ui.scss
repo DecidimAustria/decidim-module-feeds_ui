@@ -113,16 +113,6 @@ header {
 /*
 FOOTER
 */
-.main-footer {
-	color: #3c3934 !important;
-	* {
-		color: #3c3934 !important;
-	}
-	a::hover {
-		text-decoration: underline;
-	}
-}
-
 .mini-footer {
 	background-color: #f6f8fa !important;
 	padding: 0;
@@ -181,7 +171,10 @@ FOOTER
 	nav {
 		ul {
 			justify-content: center;
+			flex-direction: row;
+			gap: 1rem;
 		}
+		padding-block: 1rem;
 	}
 }
 .main-footer a,
