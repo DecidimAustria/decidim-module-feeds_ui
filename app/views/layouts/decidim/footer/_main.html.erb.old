@@ -1,5 +1,0 @@
-<%
-# empty to overwrite the core footer main partial
-%>
-
-<%#= render partial: "decidim/posts/posts/form.html" %>
