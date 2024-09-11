@@ -1,5 +1,10 @@
 ---
 de:
+  layouts:
+    decidim:
+      footer:
+        link_neues_fenster: Link öffnet einen neuen Fenster
+        AK_gefoerdert: Gefördert durch DIGIFONDS AK Wien
   decidim:
     components:
       feeds_ui:
@@ -15,10 +20,9 @@ de:
           information: Info
           notification: Es gibt %{variable_name} neue Notifikationen
         user:
-          filter: 
+          filter:
             title: filter
             name: Name
             interest: Interessen
             block: Stiege / Anlage / Quartier
             noUser: Keine Nutzer*Innen gefundene
-

@@ -5,7 +5,8 @@
     <div class="row">
         <a rel="decidim noopener" class="small_logo icona flex"
             href="https://decidim.org/"
-            target="_blank">
+            target="_blank"
+            data-external-link="false">
                 <svg viewBox="0 0 108 90" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="svg-logo" role="img" aria-label="decidim">
                     <g id="decidim-logo" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                         <g id="decidim-logo-mobile--inv" fill="currentcolor" fill-rule="nonzero">
@@ -18,7 +19,8 @@
             </a>
             <a rel="license noopener" class="small_logo icona flex"
                 href="http://creativecommons.org/licenses/by-sa/4.0/"
-                target="_blank">
+                target="_blank"
+                data-external-link="false">
                 <svg viewBox="0 0 215 65" version="1.1" xmlns="http://www.w3.org/2000/svg" class="svg-logo" role="img" aria-label="<%=t("layouts.decidim.footer.cc_by_license")%>">
                     <g id="cc-by-sa" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                         <g id="cc-by-sa--inv" fill="currentcolor" fill-rule="nonzero">
@@ -40,11 +42,15 @@
             </a>
     </div>
     <div class="row footer_mitgestalten mb-12">
-        by
+        <a href="https://wien.arbeiterkammer.at/digifonds" target="_blank" rel="decidim noopener" class="footer_logo" data-external-link="false">
+            <span class="sr-only"><%=t("layouts.decidim.footer.AK_gefoerdert")%></span>
+            <%= image_pack_tag("media/images/DigifondsGefoerdert.png", alt: t("layouts.decidim.footer.link_neues_fenster")) %>
+        </a>
         <a rel="decidim noopener"
             href="https://partizipationsbuero.at/"
             target="_blank"
-            class="footer_logo flex">
+            class="footer_logo flex"
+            data-external-link="false">
             <%= image_pack_tag("media/images/mitgestalten-logo.png", alt: "Mitgestalten Partizipiationsbüro") %>
         </a>
     </div>

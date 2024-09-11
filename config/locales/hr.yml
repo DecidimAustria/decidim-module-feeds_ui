@@ -1,5 +1,10 @@
 ---
 hr:
+  layouts:
+    decidim:
+      footer:
+        link_neues_fenster: Link otvara novi prozor
+        AK_gefoerdert: Podržano od DIGIFONDS AK Wien
   decidim:
     components:
       feeds_ui:
@@ -15,7 +20,7 @@ hr:
           information: Informacije
           notification: Ima %{variable_name} novih obavijesti
         user:
-          filter: 
+          filter:
             title: filter
             name: Ime
             interest: Interes

@@ -1,5 +1,10 @@
 ---
 tr:
+  layouts:
+    decidim:
+      footer:
+        link_neues_fenster: Link yeni bir pencere açar
+        AK_gefoerdert: DIGIFONDS AK Wien tarafından desteklenmektedir
   decidim:
     components:
       feeds_ui:
@@ -13,9 +18,9 @@ tr:
           sign_out: Çıkış yap
         topMenu:
           information: Bilgi
-          notification: "%{variable_name} yeni bildirim var"
+          notification: '%{variable_name} yeni bildirim var'
         user:
-          filter: 
+          filter:
             title: filtre
             name: İsim
             interest: İlgi

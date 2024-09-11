@@ -1,5 +1,10 @@
 ---
 it:
+  layouts:
+    decidim:
+      footer:
+        link_neues_fenster: Link apre una nuova finestra
+        AK_gefoerdert: Supportato da DIGIFONDS AK Wien
   decidim:
     components:
       feeds_ui:
@@ -15,7 +20,7 @@ it:
           information: Info
           notification: Ci sono %{variable_name} nuove notifiche
         user:
-          filter: 
+          filter:
             title: filtrp
             name: Nome
             interest: Interesse
