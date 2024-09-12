@@ -8,16 +8,14 @@
         <%= t("decidim.components.feeds_ui.user.filter.name") %>
         <%= text_field_tag :name, params[:name], id: "feedsUI__user_name", class: "reset-defaults p-4 border border-gray rounded-md", autocomplete: "off" %>
       <% end %>
-      <!--
       <%= label_tag :interest, class: "flex flex-col gap-1" do %>
         <%= t("decidim.components.feeds_ui.user.filter.interest") %>
-        <%= text_field_tag :interest, params[:interest], id: "feedsUI__user_interest", class: "reset-defaults p-4 border border-gray rounded-md", autocomplete: "off" %>
+        <%= text_field_tag :interest, params[:interest], id: "feedsUI__user_interest", class: "reset-defaults p-4 border border-gray rounded-md hidden", autocomplete: "off" %>
       <% end %>
       <%= label_tag :apartment, class: "flex flex-col gap-1" do %>
         <%= t("decidim.components.feeds_ui.user.filter.block") %>
-        <%= text_field_tag :apartment, params[:apartment], id: "feedsUI__user_apartment", class: "reset-defaults p-4 border border-gray rounded-md", autocomplete: "off" %>
+        <%= text_field_tag :apartment, params[:apartment], id: "feedsUI__user_apartment", class: "reset-defaults p-4 border border-gray rounded-md hidden", autocomplete: "off" %>
       <% end %>
-      -->
     <% end %>
   </div>
   <div class="user_display" aria-live="polite">
