@@ -25,7 +25,8 @@ module Decidim
 
       def filter_users
         # @user = Decidim::User.find_by(name: params[:name], interest: params[:interest], apartment: params[:apartment])
-        @users = confirmed_users.where("lower(name) LIKE ? OR lower(nickname) LIKE ?", "%#{params[:name].downcase}%", "%#{params[:name].downcase}%")
+        query = params[:name].downcase
+        @users = confirmed_users.where("lower(name) LIKE ? OR lower(nickname) LIKE ?", "%#{query}%", "%#{query}%")
         respond_to do |format|
           format.js
         end
