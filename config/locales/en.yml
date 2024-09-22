@@ -21,7 +21,7 @@ en:
           notification: There are %{variable_name} new notifications
         user:
           filter:
-            title: filter
+            title: Search
             name: Name
             interest: Interest
             block: Staircase / Building / District

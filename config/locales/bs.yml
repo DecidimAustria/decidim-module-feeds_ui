@@ -21,7 +21,7 @@ bs:
           notification: Postoje %{variable_name} nova obavještenja
         user:
           filter:
-            title: Filter
+            title: Traži
             name: Ime
             interest: Interes
             block: Stubište / Zgrada / Kvart

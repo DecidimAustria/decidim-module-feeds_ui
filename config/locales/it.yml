@@ -21,7 +21,7 @@ it:
           notification: Ci sono %{variable_name} nuove notifiche
         user:
           filter:
-            title: filtrp
+            title: ricerca
             name: Nome
             interest: Interesse
             block: Scala / Struttura / Quartiere

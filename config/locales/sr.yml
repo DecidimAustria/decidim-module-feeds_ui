@@ -21,7 +21,7 @@ sr:
           notification: Ima %{variable_name} novih obaveštenja
         user:
           filter:
-            title: Filter
+            title: Traži
             name: Ime
             interest: Interes
             block: Stepenište / Zgrada / Okrug

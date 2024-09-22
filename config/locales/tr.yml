@@ -21,7 +21,7 @@ tr:
           notification: '%{variable_name} yeni bildirim var'
         user:
           filter:
-            title: filtre
+            title: Aramak
             name: İsim
             interest: İlgi
             block: Merdiven / Bina / Bölge

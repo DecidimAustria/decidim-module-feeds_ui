@@ -21,7 +21,7 @@ hr:
           notification: Ima %{variable_name} novih obavijesti
         user:
           filter:
-            title: filter
+            title: Pretraživanje
             name: Ime
             interest: Interes
             block: Stub / Zgrada / Distrikt
