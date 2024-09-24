@@ -1,4 +1,17 @@
 /* css for decidim_feeds_ui */
+/*
+* Translation Bar
+*/
+.translation-bar {
+	@apply gap-4 w-full max-w-screen-2xl mx-auto p-4 lg:p-16;
+	a {
+		@apply border-black p-0.5;
+	}
+}
+
+/*
+* HEADER
+*/
 header {
 	.main-bar__avatar {
 		@apply border-0 shadow-feedMenu;
