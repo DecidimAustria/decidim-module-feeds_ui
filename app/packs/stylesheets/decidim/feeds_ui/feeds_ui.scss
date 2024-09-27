@@ -96,9 +96,10 @@ header {
 			}
 		}
 	}
-	#content {
-		@apply mt-[72px];
-	}
+}
+
+#content {
+	@apply max-lg:mt-[72px] w-full xl:max-w-screen-xl 2xl:max-w-screen-2xl mx-auto p-4 lg:p-16 lg:pt-0 lg:flex-row lg:gap-4 lg:justify-between;
 }
 
 @media (max-width: 1024px) {
