@@ -14,9 +14,9 @@
 <% end %>
 
 <% if controller.controller_name != 'conversations' %>
-  <button class="btn circle main-bar__links-mobile__item feeds__feed_newElement-opener" aria-expanded="false" aria-controls="newElementForm" type="button">
+  <button class="btn circle main-bar__links-mobile__item feeds__feed_newElement-opener" aria-expanded="false" aria-controls="feeds__feed_newElement" aria-haspopup="feeds__feed_newElement" type="button">
     <%= icon "close-circle-line" %>
-    <span class="sr-only"><%= t("decidim.components.posts.newFeed.title") %></span>
+    <span class="sr-only"><%= t("decidim.components.posts.newFeed.openButton") %></span>
   </button>
 <% else %>
   <button id="start-conversation-dialog-button" type="button" class="btn circle main-bar__links-mobile__item" data-dialog-open="conversation">

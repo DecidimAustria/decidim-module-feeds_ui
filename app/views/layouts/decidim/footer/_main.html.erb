@@ -1,23 +1,4 @@
 <% if current_user.present? %>
   <%= render partial: "decidim/posts/posts/form.html" %>
-
-  <script>
-    window.translations = {
-      newSurvey: {
-        questionTitle       : "<%= t('decidim.components.posts.newFeed.newSurvey.questionTitle') %>",
-        answerType          : "<%= t('decidim.components.posts.newFeed.newSurvey.answerType') %>",
-        multipleChoice      : "<%= t('decidim.components.posts.newFeed.newSurvey.multipleChoice') %>",
-        singleChoice        : "<%= t('decidim.components.posts.newFeed.newSurvey.singleChoice') %>",
-        newAnswer           : "<%= t('decidim.components.posts.newFeed.newSurvey.newAnswer') %>",
-        newQuestionResponse : "<%= t('decidim.components.posts.newFeed.newSurvey.newQuestionResponse') %>",
-        newAnswerResponse   : "<%= t('decidim.components.posts.newFeed.newSurvey.newAnswerResponse') %>",
-      },
-      dialog: {
-        dialogBodyMsg       : '<%= t('decidim.posts.posts.host.status.dialogBodyMsg') %>',
-        dialogBodyResponse  : '<%= t('decidim.posts.posts.host.status.dialogBodyResponse') %>',
-      }
-    };
-  </script>
 <% end %>
-
 <%= append_javascript_pack_tag "decidim_feeds" %>
