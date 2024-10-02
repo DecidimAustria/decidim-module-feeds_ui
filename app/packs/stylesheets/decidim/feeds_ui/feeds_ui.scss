@@ -120,7 +120,7 @@ header {
 	@apply max-lg:mt-[72px];
 }
 
-#content main {
+main.feeds__main {
 	@apply flex w-full xl:max-w-screen-xl 2xl:max-w-screen-2xl mx-auto p-4 lg:p-16 lg:pt-0 lg:flex-row lg:gap-4 lg:justify-between;
 }
 
