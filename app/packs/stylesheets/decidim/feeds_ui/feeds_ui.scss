@@ -1,13 +1,4 @@
 /* css for decidim_feeds_ui */
-/*
-* Translation Bar
-*/
-.translation-bar {
-	@apply gap-4 w-full max-w-screen-2xl mx-auto p-4 lg:p-16;
-	a {
-		@apply border-black p-0.5;
-	}
-}
 
 /*
 * HEADER
@@ -98,10 +89,6 @@ header {
 	}
 }
 
-#content {
-	@apply max-lg:mt-[72px] w-full xl:max-w-screen-xl 2xl:max-w-screen-2xl mx-auto p-4 lg:p-16 lg:pt-0 lg:flex-row lg:gap-4 lg:justify-between;
-}
-
 @media (max-width: 1024px) {
 	header {
 		.main-bar {
@@ -113,6 +100,28 @@ header {
 			@apply hidden;
 		}
 	}
+}
+
+/*
+* Translation Bar
+*/
+.translation-bar {
+	@apply max-lg:pr-[91px] md:pr-[101px] lg:pr-0 w-full xl:max-w-screen-xl 2xl:max-w-screen-2xl mx-auto px-4 lg:px-16;
+	a {
+		@apply border-black p-0.5 max-lg:block max-w-fit mb-2;
+	}
+}
+
+/*
+* Content
+*/
+
+#content {
+	@apply max-lg:mt-[72px];
+}
+
+#content main {
+	@apply flex w-full xl:max-w-screen-xl 2xl:max-w-screen-2xl mx-auto p-4 lg:p-16 lg:pt-0 lg:flex-row lg:gap-4 lg:justify-between;
 }
 
 .feedsUI__user {
