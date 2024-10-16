@@ -138,7 +138,7 @@ main.feeds__main {
 FOOTER
 */
 footer {
-	@apply mb-0;
+	@apply mb-0 z-40;
 	.mini-footer {
 		background-color: #f6f8fa !important;
 		padding: 0;
