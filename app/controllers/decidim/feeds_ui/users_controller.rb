@@ -39,7 +39,7 @@ module Decidim
       end
 
       def confirmed_users
-        organization_users.confirmed
+        organization_users.confirmed.not_deleted
       end
 
     end
