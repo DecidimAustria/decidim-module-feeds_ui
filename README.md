@@ -4,8 +4,9 @@ A mobile ui for the decidim feeds module.
 
 ## Usage
 
-FeedsUi will be available as a Component for a Participatory
-Space.
+FeedsUi will add an overview over all users under /feeds_ui/allusers
+
+It will also overwrite the decidim layout for a more minimalistic and mobile first interface that is optimal for the [feeds](https://github.com/DecidimAustria/decidim-module-feeds) and [posts](https://github.com/DecidimAustria/decidim-module-posts) modules.
 
 ## Installation
 
