@@ -75,7 +75,7 @@ header {
 @media (max-width: 768px) {
 	header {
 		.main-bar {
-			@apply flex gap-4 items-center bg-white fixed left-0 right-0 z-50;
+			@apply flex gap-4 items-center bg-white fixed left-0 right-0 z-30;
 			> *:last-child {
 				@apply grow;
 			}
@@ -138,8 +138,10 @@ main.feeds__main {
 FOOTER
 */
 footer {
-	@apply mb-0 z-40;
+	@apply mb-0;
 	.mini-footer {
+		position: relative;
+		z-index: 20;
 		background-color: #f6f8fa !important;
 		padding: 0;
 		padding-bottom: 80px;
