@@ -14,6 +14,7 @@ tr:
           user: Kullanıcı
           group: Gruplar
           messenger: Mesajlaşma
+          admin: Yönetici
         userMenu:
           sign_out: Çıkış yap
         topMenu:
