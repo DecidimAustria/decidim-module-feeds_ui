@@ -3,11 +3,9 @@
 <% end %>
 
 <% if current_user.admin? %>
-  <% if allowed_to? :read, :admin_dashboard %>
-      <%= link_to decidim_admin.root_path, class: "main-bar__links-mobile__item order-5" do %>
-        <%= icon "home-gear-line" %>
-        <span class="text-secondary text-center"><%= t("decidim.components.feeds_ui.mainMenu.admin") %></span>
-      <% end %>
+  <%= link_to decidim_admin.root_path, class: "main-bar__links-mobile__item order-5" do %>
+    <%= icon "home-gear-line" %>
+    <span class="text-secondary text-center"><%= t("decidim.components.feeds_ui.mainMenu.admin") %></span>
   <% end %>
 <% else %>
   <% if false %>
