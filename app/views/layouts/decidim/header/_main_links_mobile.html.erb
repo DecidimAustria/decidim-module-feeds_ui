@@ -33,8 +33,10 @@
 <% end %>
 
 <% order_class = current_user.admin? ? 'order-2' : 'order-4' %>
+
+<% user_url = current_user.admin? ? decidim_admin.officializations_path : decidim_feeds_ui.allusers_path %>
 <% link_class = current_page?(decidim_feeds_ui.allusers_path) ? 'active' : '' %>
-<%= link_to decidim_feeds_ui.allusers_path, class: "main-bar__links-mobile__item #{order_class} #{link_class}" do %>
+<%= link_to user_url, class: "main-bar__links-mobile__item #{order_class} #{link_class}" do %>
   <%= icon "team-line" %><span><%= t("decidim.components.feeds_ui.mainMenu.user") %></span>
 <% end %>
 
