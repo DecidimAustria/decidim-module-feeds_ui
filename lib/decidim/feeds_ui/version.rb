@@ -3,8 +3,9 @@
 module Decidim
   # This holds the decidim-meetings version.
   module FeedsUi
-    def self.version
-      "0.28.1"
-    end
+    VERSION = "1.0.0"
+    COMPAT_DECIDIM_VERSION = [">= 0.28.0", "< 0.29"].freeze
+    COMPAT_FEEDS_VERSION = [">= 1.0.0", "< 2"].freeze
+    COMPAT_POSTS_VERSION = [">= 1.0.0", "< 2"].freeze
   end
 end
