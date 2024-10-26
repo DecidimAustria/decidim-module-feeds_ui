@@ -1,6 +1,10 @@
 # Decidim::FeedsUi
 
-A mobile ui for the decidim feeds module.
+A very reduced mobile-first UI for the decidim feeds module.
+
+This module rewrites some parts of the decidim layout to allow a social feeds optimized UI, that doesn't display the main menu any more. Instead it adds a bottom menu/tabbar that gives direct access to the main functions of a social feed.
+
+**Use this module only if you want to use Decidim solely as a social media platform.**
 
 ## Usage
 
