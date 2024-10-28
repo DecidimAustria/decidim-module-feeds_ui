@@ -1,6 +1,6 @@
 <% if current_user %>
   <%= link_to decidim.account_path do %>
-    <span class="main-bar__avatar">
+    <span class="main-bar__avatar border-0 shadow">
       <%= image_tag(
             Decidim::UserPresenter.new(current_user).avatar_url(:thumb),
             alt: t("decidim.author.avatar", name: decidim_sanitize(current_user.nickname))

@@ -5,7 +5,8 @@
 */
 header {
 	.main-bar__avatar {
-		@apply border-0 shadow-feedMenu;
+		--tw-shadow: rgba(var(--feeds-notification), 1);
+		@apply border-0 shadow;
 	}
 	.main-bar__links-mobile-top {
 		@apply flex gap-2 lg:hidden;
@@ -13,7 +14,8 @@ header {
 			@apply flex-grow flex gap-2 justify-center;
 		}
 		.links-mobile-top__item {
-			@apply flex gap-1 items-center text-xs font-medium rounded-2xl shadow-feedMenu py-1 px-2 w-fit;
+			--tw-shadow: rgba(var(--feeds-notification), 1);
+			@apply flex gap-1 items-center text-xs font-medium rounded-2xl shadow py-1 px-2 w-fit;
 			svg {
 				@apply fill-black w-[16px] h-auto;
 			}
@@ -26,21 +28,25 @@ header {
 				}
 			}
 			&.notification {
-				@apply shadow-feedNotification w-8 h-8 rounded-full;
+				--tw-shadow: rgba(var(--feeds-notification), 1);
+				@apply shadow w-8 h-8 rounded-full;
 				svg {
-					@apply w-4 h-auto fill-feeds-notification;
+					@apply w-4 h-auto;
+					fill: rgba(var(--feeds-notification), 1);
 				}
 			}
 			&.active {
-				@apply shadow-feedNotification;
+				--tw-shadow: rgba(var(--feeds-notification), 1);
+				@apply shadow;
 				svg {
-					@apply fill-feeds-notification;
+					fill: rgba(var(--feeds-notification), 1);
 				}
 			}
 		}
 	}
 	.main-bar__links-mobile {
-		@apply inset-x-2 bottom-2 w-auto rounded-2xl shadow-feedMenu;
+		fill: var(--feeds-feedMenu);
+		@apply inset-x-2 bottom-2 w-auto rounded-2xl shadow;
 		.main-bar__links-mobile__item {
 			@apply justify-between w-1/5 text-xs;
 			svg {
@@ -56,16 +62,22 @@ header {
 			}
 			&.active {
 				span {
-					@apply text-feeds-notification;
+					color: rgba(var(--feeds-notification), 1);
 				}
 				svg {
-					@apply fill-feeds-notification;
+					fill: rgba(var(--feeds-notification), 1);
 				}
 			}
 			&.notification {
 				@apply gap-0 relative;
 				span.notification {
-					@apply absolute top-0 right-4 w-3 h-3 bg-feeds-notification rounded-full;
+					position: absolute;
+					top: 0;
+					right: 1rem;
+					width: 0.75rem;
+					height: 0.75rem;
+					background-color: rgba(var(--feeds-notification), 1);
+					border-radius: 9999px;
 				}
 			}
 		}
@@ -75,15 +87,29 @@ header {
 @media (max-width: 768px) {
 	header {
 		.main-bar {
-			@apply flex gap-4 items-center bg-white fixed left-0 right-0 z-30;
+			display: flex;
+			gap: 1rem;
+			align-items: center;
+			background-color: white;
+			position: fixed;
+			left: 0;
+			right: 0;
+			z-index: 30;
 			> *:last-child {
-				@apply grow;
+				flex-grow: 1;
 			}
 		}
 		.container:has(.flash) {
-			@apply absolute top-[72px] left-0 right-0 z-50 bg-white;
+			position: absolute;
+			top: 72px;
+			left: 0;
+			right: 0;
+			z-index: 50;
+			background-color: white;
 			.flash {
-				@apply m-0 py-2;
+				margin: 0;
+				padding-top: 0.5rem;
+				padding-bottom: 0.5rem;
 			}
 		}
 	}
@@ -93,11 +119,11 @@ header {
 	header {
 		.main-bar {
 			.main-bar__search {
-				@apply hidden;
+				display: none;
 			}
 		}
 		#menu-bar {
-			@apply hidden;
+			display: none;
 		}
 	}
 }
@@ -227,4 +253,9 @@ footer {
 			}
 		}
 	}
+}
+
+// some tailwind hacks
+.bg-feeds-notification {
+	background-color: rgba(var(--feeds-notification), 1);
 }
