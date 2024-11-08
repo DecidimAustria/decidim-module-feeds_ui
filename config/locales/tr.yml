@@ -27,3 +27,34 @@ tr:
             interest: İlgi
             block: Merdiven / Bina / Bölge
             noUser: Kullanıcı bulunamadı
+  devise:
+    sessions:
+      lebenscampus:
+        title: 'DIGIgrätzl, Lebenscampus için <br> ev platformudur.'
+        text: '<p>Bir sakin olarak:
+          <ul class="list-disc my-4 pl-10 space-y-2">
+          <li>Burada <strong>komşularınızla bağlantı kurabilirsiniz</strong>;</li>
+          <li>Eşyaları <strong>değiş tokuş edebilir</strong> ve <strong>paylaşabilirsiniz</strong>;</li>
+          <li>Ortak alanlarda <strong>ortak etkinlikler planlayabilirsiniz</strong>;</li>
+          <li>Sizin için önemli olan <strong>ev konularını</strong> gündeme getirebilirsiniz</li>
+          <li>ve daha fazlası.</li>
+          </ul>
+          Şimdi kaydolun ve <strong>ev platformunuzu</strong> keşfedin.
+          Platform, gizliliğe büyük önem verir ve yalnızca birkaç kişisel veri toplar.
+          Daha fazla bilgi almak isterseniz, <a href="/pages/info" class="underline">yardım menümüze göz atın</a>.
+          </p>
+          <p class="text-center py-8">DIGIgrätzl de iyi eğlenceler dileriz.</p></p>'
+      wolfganggasse:
+        title: 'DIGIgrätzl, Wolfganggasse Mahallesi için <br> komşuluk platformudur.'
+        text: '<p>Bir sakin olarak:
+          <ul class="list-disc my-4 pl-10 space-y-2">
+          <li>Burada mahalledeki insanlarla bağlantı kurabilirsiniz;</li>
+          <li>Eşyaları <strong>değiş tokuş edebilir</strong> ve <strong>paylaşabilirsiniz</strong>;</li>
+          <li>Etkinlikler hakkında bilgi alabilirsiniz;</li>
+          <li>Mahalleyi etkinliklere davet edebilirsiniz</li>
+          </ul>
+          Şimdi kaydolun ve <strong>ev platformunuzu</strong> keşfedin.
+          Platform, gizliliğe büyük önem verir ve yalnızca birkaç kişisel veri toplar.
+          Daha fazla bilgi almak isterseniz, <a href="/pages/info" class="underline">yardım menümüze göz atın</a>.
+          </p>
+          <p class="text-center py-8">DIGIgrätzl de iyi eğlenceler dileriz.</p></p>'

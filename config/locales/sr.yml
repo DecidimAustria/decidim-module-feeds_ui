@@ -27,3 +27,34 @@ sr:
             interest: Interes
             block: Stepenište / Zgrada / Okrug
             noUser: Nema pronađenih korisnika
+  devise:
+    sessions:
+      lebenscampus:
+        title: 'DIGIgrätzl je <br> platforma za stanare Lebenscampusa.'
+        text: '<p>Kao stanar možeš:
+          <ul class="list-disc my-4 pl-10 space-y-2">
+          <li>Povezati se ovde sa svojim <strong>komšijama</strong>;</li>
+          <li><strong>razmenjivati</strong> i <strong>deliti</strong> predmete;</li>
+          <li><strong>Planirati</strong> zajedničke aktivnosti u zajedničkim prostorijama;</li>
+          <li>Uneti važne <strong>teme kuće</strong></li>
+          <li>i mnogo toga drugog.</li>
+          </ul>
+          Registruj se sada i otkrij <strong>svoju kućnu platformu</strong>.
+          Platforma pridaje veliki značaj zaštiti podataka i prikuplja samo nekoliko ličnih podataka.
+          Ako želiš da saznaš više, <a href="/pages/info" class="underline">pogledaj naš meni za pomoć</a>.
+          </p>
+          <p class="text-center py-8">Želimo ti puno zabave na <span class="font-semibold">DIGIgrätzl</span>.</p></p>'
+      wolfganggasse:
+        title: 'DIGIgrätzl je <br> platforma za susedstvo za kvart Wolfganggasse.'
+        text: '<p>Kao stanar možeš:
+          <ul class="list-disc my-4 pl-10 space-y-2">
+          <li>Povezati se ovde sa ljudima iz susedstva;</li>
+          <li><strong>razmenjivati</strong> i <strong>deliti</strong> predmete;</li>
+          <li>Informisati se o događajima;</li>
+          <li>Pozvati susedstvo na događaje</li>
+          </ul>
+          Registruj se sada i otkrij <strong>svoju kućnu platformu</strong>.
+          Platforma pridaje veliki značaj zaštiti podataka i prikuplja samo nekoliko ličnih podataka.
+          Ako želiš da saznaš više, <a href="/pages/info" class="underline">pogledaj naš meni za pomoć</a>.
+          </p>
+          <p class="text-center py-8">Želimo ti puno zabave na <span class="font-semibold">DIGIgrätzl</span>.</p></p>'

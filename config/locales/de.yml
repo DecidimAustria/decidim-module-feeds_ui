@@ -27,3 +27,34 @@ de:
             interest: Interessen
             block: Stiege / Anlage / Quartier
             noUser: Keine Nutzer*Innen gefundene
+  devise:
+    sessions:
+      lebenscampus:
+        title: 'DIGIgrätzl ist <br> die Hausplattform für den Lebenscampus.'
+        text: '<p>Als Bewohner:in kannst Du:
+          <ul class="list-disc my-4 pl-10 space-y-2">
+          <li>Dich hier mit Deinen <strong>Nachbar:innen verbinden</strong>;</li>
+          <li>Gegenstände <strong>tauschen</strong> und <strong>teilen</strong>;</li>
+          <li><strong>Gemeinsame</strong> Aktivitäten in den Gemeinschaftsräumen <strong>planen</strong>;</li>
+          <li>Dir wichtige <strong>Hausthemen</strong> einbringen</li>
+          <li>und vieles andere.</li>
+          </ul>
+          Registriere Dich jetzt und entdecke <strong>Deine Hausplattform</strong>.
+          Die Plattform legt hohen Wert auf Datenschutz und erfasst nur wenige persönliche Daten.
+          Solltest Du mehr wissen wollen, <a href="/pages/info" class="underline">schau in unser Hilfe-Menü</a>.
+          </p>
+          <p class="text-center py-8">Wir wünschen Dir viel Spaß auf <span class="font-semibold">DIGIgrätzl</span>.</p></p>'
+      wolfganggasse:
+        title: 'DIGIgrätzl ist <br> die Nachbarschaftsplattform für das Quartier Wolfganggasse.'
+        text: '<p>Als Bewohner:in kannst Du:
+          <ul class="list-disc my-4 pl-10 space-y-2">
+          <li>Dich hier mit Menschen in der Nachbarschaft verbinden;</li>
+          <li>Gegenstände <strong>tauschen</strong> und <strong>teilen</strong>;</li>
+          <li>Dich über Veranstaltungen informieren;</li>
+          <li>Die Nachbarschaft zu Events einladen</li>
+          </ul>
+          Registriere Dich jetzt und entdecke <strong>Deine Hausplattform</strong>.
+          Die Plattform legt hohen Wert auf Datenschutz und erfasst nur wenige persönliche Daten.
+          Solltest Du mehr wissen wollen, <a href="/pages/info" class="underline">schau in unser Hilfe-Menü</a>.
+          </p>
+          <p class="text-center py-8">Wir wünschen Dir viel Spaß auf <span class="font-semibold">DIGIgrätzl</span>.</p></p>'

@@ -27,3 +27,34 @@ it:
             interest: Interesse
             block: Scala / Struttura / Quartiere
             noUser: Nessun utente trovato
+  devise:
+    sessions:
+      lebenscampus:
+        title: 'DIGIgrätzl è <br> la piattaforma domestica per il Lebenscampus.'
+        text: '<p>Come residente puoi:
+          <ul class="list-disc my-4 pl-10 space-y-2">
+          <li>Connetterti qui con i tuoi <strong>vicini</strong>;</li>
+          <li><strong>Scambiare</strong> e <strong>condividere</strong> oggetti;</li>
+          <li><strong>Pianificare</strong> attività comuni negli spazi comuni;</li>
+          <li>Portare avanti temi importanti per la casa</li>
+          <li>e molto altro.</li>
+          </ul>
+          Registrati ora e scopri <strong>la tua piattaforma domestica</strong>.
+          La piattaforma dà grande importanza alla privacy e raccoglie solo pochi dati personali.
+          Se vuoi saperne di più, <a href="/pages/info" class="underline">consulta il nostro menu di aiuto</a>.
+          </p>
+          <p class="text-center py-8">Ti auguriamo tanto divertimento su <span class="font-semibold">DIGIgrätzl</span>.</p></p>'
+        wolfganggasse:
+          title: 'DIGIgrätzl è <br> la piattaforma di quartiere per il Quartiere Wolfganggasse.'
+          text: '<p>Come residente puoi:
+            <ul class="list-disc my-4 pl-10 space-y-2">
+            <li>Connetterti qui con le persone del quartiere;</li>
+            <li><strong>Scambiare</strong> e <strong>condividere</strong> oggetti;</li>
+            <li>Informarti sugli eventi;</li>
+            <li>Invitare il quartiere agli eventi</li>
+            </ul>
+            Registrati ora e scopri <strong>la tua piattaforma di quartiere</strong>.
+            La piattaforma dà grande importanza alla privacy e raccoglie solo pochi dati personali.
+            Se vuoi saperne di più, <a href="/pages/info" class="underline">consulta il nostro menu di aiuto</a>.
+            </p>
+            <p class="text-center py-8">Ti auguriamo tanto divertimento su <span class="font-semibold">DIGIgrätzl</span>.</p></p>'

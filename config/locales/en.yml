@@ -27,3 +27,34 @@ en:
             interest: Interest
             block: Staircase / Building / District
             noUser: No users found
+  devise:
+    sessions:
+      lebenscampus:
+        title: 'DIGIgrätzl is <br> the home platform for the Lebenscampus.'
+        text: '<p>As a resident you can:
+          <ul class="list-disc my-4 pl-10 space-y-2">
+          <li>Connect here with your <strong>neighbors</strong>;</li>
+          <li><strong>Exchange</strong> and <strong>share</strong> items;</li>
+          <li><strong>Plan</strong> common activities in common spaces;</li>
+          <li>Address important topics for the house</li>
+          <li>and much more.</li>
+          </ul>
+          Register now and discover <strong>your home platform</strong>.
+          The platform places great importance on privacy and collects only a few personal data.
+          If you want to know more, <a href="/pages/info" class="underline">check our help menu</a>.
+          </p>
+          <p class="text-center py-8">We wish you a lot of fun on <span class="font-semibold">DIGIgrätzl</span>.</p></p>'
+        wolfganggasse:
+          title: 'DIGIgrätzl is <br> the neighborhood platform for the Wolfganggasse District.'
+          text: '<p>As a resident you can:
+            <ul class="list-disc my-4 pl-10 space-y-2">
+            <li>Connect here with the people of the neighborhood;</li>
+            <li><strong>Exchange</strong> and <strong>share</strong> items;</li>
+            <li>Get informed about events;</li>
+            <li>Invite the neighborhood to events</li>
+            </ul>
+            Register now and discover <strong>your neighborhood platform</strong>.
+            The platform places great importance on privacy and collects only a few personal data.
+            If you want to know more, <a href="/pages/info" class="underline">check our help menu</a>.
+            </p>
+            <p class="text-center py-8">We wish you a lot of fun on <span class="font-semibold">DIGIgrätzl</span>.</p></p>'
