@@ -49,12 +49,12 @@ hr:
         text: '<p>Kao stanar možete:
           <ul class="list-disc my-4 pl-10 space-y-2">
           <li>Povezati se ovdje s ljudima u susjedstvu;</li>
-          <li><strong>razmjenjivati</strong> i <strong>dijeliti</strong> predmete;</li>
+          <li>Razmjenjivati i dijeliti predmete;</li>
           <li>Informirati se o događanjima;</li>
           <li>Pozvati susjedstvo na događaje</li>
           </ul>
-          Registrirajte se sada i otkrijte <strong>vašu kućnu platformu</strong>.
+          Registrirajte se sada i otkrijte svoj DIGIgrätzl.
           Platforma pridaje veliku važnost zaštiti podataka i prikuplja samo nekoliko osobnih podataka.
           Ako želite saznati više, <a href="/pages/info" class="underline">pogledajte naš izbornik pomoći</a>.
           </p>
-          <p class="text-center py-8">Želimo vam puno zabave na <span class="font-semibold">DIGIgrätzl</span>.</p></p>'
+          <p class="text-center py-8">Želimo vam puno zabave na <span class="font-semibold">DIGIgrätzl</span>.</p>'
