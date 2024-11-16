@@ -1,4 +1,5 @@
-<%= link_to decidim.root_url, class: "main-bar__links-mobile__item order-1" do %>
+<% link_class = controller.controller_name == 'posts' ? 'active' : '' %>
+<%= link_to decidim.root_url, class: "main-bar__links-mobile__item order-1 #{link_class}" do %>
   <%= icon "home-5-line" %><span><%= t("decidim.components.feeds_ui.mainMenu.home") %></span>
 <% end %>
 
@@ -14,14 +15,14 @@
     </button>
   <% end %>
 
-  <% link_class = current_page?("/pages/groups") ? 'active' : '' %>
-  <%= link_to "/pages/groups", class: "feeds_popup main-bar__links-mobile__item order-2 #{link_class}", aria: { expanded: 'false', haspopup: 'feeds_popup', controls: 'feeds_popup' } do %>
+  <% link_class = controller.controller_name == 'feeds' ? 'active' : '' %>
+  <%= link_to decidim_feeds.feeds_path, class: "feeds_popup main-bar__links-mobile__item order-2 #{link_class}", aria: { expanded: 'false', haspopup: 'dialog', controls: 'feeds_popup' } do %>
     <%= icon "group-2-line" %><span><%= t("decidim.components.feeds_ui.mainMenu.group") %></span>
   <% end %>
 <% end %>
 
 <% if controller.controller_name != 'conversations' %>
-  <button class="btn circle main-bar__links-mobile__item posts__post_newElement-opener order-3" aria-expanded="false" aria-controls="posts__post_newElement" aria-haspopup="posts__post_newElement" type="button">
+  <button class="btn circle main-bar__links-mobile__item posts__post_newElement-opener order-3" aria-expanded="false" aria-controls="posts__post_newElement" aria-haspopup="dialog" type="button">
     <%= icon "close-circle-line" %>
     <span class="sr-only"><%= t("decidim.components.posts.newFeed.openButton") %></span>
   </button>
@@ -35,7 +36,7 @@
 <% order_class = current_user.admin? ? 'order-2' : 'order-4' %>
 
 <% user_url = current_user.admin? ? decidim_admin.officializations_path : decidim_feeds_ui.allusers_path %>
-<% link_class = current_page?(decidim_feeds_ui.allusers_path) ? 'active' : '' %>
+<% link_class = controller.controller_name.include?('user') ? 'active' : '' %>
 <%= link_to user_url, class: "main-bar__links-mobile__item #{order_class} #{link_class}" do %>
   <%= icon "team-line" %><span><%= t("decidim.components.feeds_ui.mainMenu.user") %></span>
 <% end %>
@@ -46,7 +47,7 @@
     <span><%= t("decidim.admin.menu.newsletters") %></span>
   <% end %>
 <% else %>
-  <% link_class = current_page?(decidim.conversations_path) ? 'active' : '' %>
+  <% link_class = controller.controller_name == 'conversations' ? 'active' : '' %>
   <%= link_to decidim.conversations_path, class: "main-bar__links-mobile__item order-5 #{link_class}" do %>
     <%= icon "chat-4-line" %>
     <span><%= t("decidim.components.feeds_ui.mainMenu.messenger") %></span>
