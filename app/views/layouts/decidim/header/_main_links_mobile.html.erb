@@ -9,16 +9,9 @@
     <span class="text-secondary text-center"><%= t("decidim.components.feeds_ui.mainMenu.admin") %></span>
   <% end %>
 <% else %>
-  <% if false %>
-    <button id="dropdown-trigger-links-mobile-search" class="main-bar__links-mobile__item order-2" data-component="dropdown" data-target="dropdown-menu-search-mobile" data-autofocus="input-search-mobile">
-      <%= icon "group-2-line" %><span><%= t("decidim.components.feeds_ui.mainMenu.group") %></span>
-    </button>
-  <% end %>
-
   <% link_class = controller.controller_name == 'feeds' ? 'active' : '' %>
-  <%= link_to "/pages/groups", class: "feeds_popup main-bar__links-mobile__item order-2 #{link_class}", aria: { expanded: 'false', haspopup: 'feeds_popup', controls: 'feeds_popup' } do %>
-  <%#= link_to decidim_feeds.feeds_path, class: "feeds_popup main-bar__links-mobile__item order-2 #{link_class}", aria: { expanded: 'false', haspopup: 'dialog', controls: 'feeds_popup' } do %>
-    <%= icon "group-2-line" %><span><%= t("decidim.components.feeds_ui.mainMenu.group") %></span>
+    <%= link_to decidim_feeds.feeds_path, class: "feeds_popup_btn main-bar__links-mobile__item order-2 #{link_class}", aria: { expanded: 'false', haspopup: 'menu', controls: 'feeds_popup' } do %>
+    <%= icon "group-2-line", class:'icon' %><span><%= t("decidim.components.feeds_ui.mainMenu.group") %></span>
   <% end %>
 <% end %>
 
