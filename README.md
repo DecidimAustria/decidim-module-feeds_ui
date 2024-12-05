@@ -3,6 +3,7 @@
 A very reduced mobile-first UI for the decidim feeds module.
 
 This module rewrites some parts of the decidim layout to allow a social feeds optimized UI, that doesn't display the main menu any more. Instead it adds a bottom menu/tabbar that gives direct access to the main functions of a social feed.
+Its development was funded by digifonds Arbeiterkammer Wien: https://wien.arbeiterkammer.at/digifonds
 
 **Use this module only if you want to use Decidim solely as a social media platform.**
 
